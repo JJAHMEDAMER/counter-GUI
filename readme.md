@@ -5,12 +5,12 @@ The app consists of two buttons that can increase and decrease the value on the 
 
 ### Basic App
 
-()[https://github.com/JJAHMEDAMER/counter-GUI/blob/main/imgs/no_styling.png]
+!()[https://github.com/JJAHMEDAMER/counter-GUI/blob/main/imgs/no_styling.png]
 
 
 ### Simple stypling
 
-()[https://github.com/JJAHMEDAMER/counter-GUI/blob/main/imgs/styling.png]
+!()[./imgs/styling.png]
 
 
 
