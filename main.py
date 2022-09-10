@@ -1,26 +1,83 @@
 import tkinter as tk
+from tkinter.font import Font
+
+BG_COLOR = "#05445E"
+BUTTON_COLOR = "#189AB4"
+TEXT_COLOR = "#E9ECF5"
+
+BUTTON_WIDTH = 15
+BUTTON_HEIGHT = 2
 
 def plus_one():
     global x
     x += 1
     number.config(text = x)
-    number.grid(row= 1, column=1, columnspan=2)
+    number.place(relx=0.5, rely=0.5, anchor="center")    
     
 def minus_one():
     global x
     x -= 1
     number.config(text = x)
-    number.grid(row= 1, column=1, columnspan=2)
+    number.place(relx=0.5, rely=0.5, anchor="center")
 
 x = 0
 win = tk.Tk()
+win.title("Counter")
+win.geometry("400x400")
+win.configure(bg=BG_COLOR)
+win.grid_propagate(False)
 
-number = tk.Label(win, text = x)
-number.grid(row= 1, column=1, columnspan=2)
+number_font = Font(
+    family="Helvetica",
+    size = 150,
+    weight="bold",
+)
 
-increment = tk.Button(win, text = "INCREMENT", width=20, command=plus_one)
-increment.grid(row = 2, column = 1)
+button_font = Font(
+    family="Helvetica",
+    size = 12,
+    weight="bold",
+)
 
-decrement = tk.Button(win, text = "DECREMENT", width=20, command=minus_one)
-decrement.grid(row=2, column=2)
+frame = tk.LabelFrame(win, bg= BG_COLOR, bd = 0, width=350, height=350)
+frame.place(relx=0.5, rely=0.5, anchor="center")
+
+number = tk.Label(
+    frame, 
+    text = x, 
+    font=number_font,
+    bg = BG_COLOR,
+    bd = 0,
+    fg = TEXT_COLOR
+    )
+number.place(relx=0.5, rely=0.4, anchor="center")
+
+increment = tk.Button(
+    frame, 
+    text = "INCREMENT",
+    bg = BUTTON_COLOR, 
+    fg = TEXT_COLOR, 
+    bd = 0,  
+    font=button_font, 
+    width=BUTTON_WIDTH, 
+    height=BUTTON_HEIGHT, 
+    command=plus_one
+    )
+
+increment.place(relx=0.2, rely=0.8, anchor="n")
+
+decrement = tk.Button(
+    frame, 
+    text = "DECREMENT",
+    bg = BUTTON_COLOR, 
+    fg = TEXT_COLOR, 
+    bd = 0, 
+    font=button_font, 
+    width=BUTTON_WIDTH, 
+    height=BUTTON_HEIGHT, 
+    command=minus_one
+    )
+
+decrement.place(relx=0.8, rely=0.8, anchor="n")
+
 win.mainloop()
