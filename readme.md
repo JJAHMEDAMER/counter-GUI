@@ -3,14 +3,14 @@
 This is a simple counter app built using Tkinter
 The app consists of two buttons that can increase and decrease the value on the screen
 
-### Basic App
+## Basic App
 
-!()[https://github.com/JJAHMEDAMER/counter-GUI/blob/main/imgs/no_styling.png]
+![no_styling_img](https://github.com/JJAHMEDAMER/counter-GUI/blob/main/imgs/no_styling.png)
 
 
-### Simple stypling
+## Simple stypling
 
-!()[./imgs/styling.png]
+![styling_img](./imgs/styling.png)
 
 
 
